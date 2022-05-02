@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etch A Sketch | TOP</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="header">Etch A Sketch by The Odin Project</div>
+
+    <div class="tiles"></div>
+
+    <div class="operator">
+        <p>Select the grid size</p>
+
+        <div class="controls">
+            <div class="selector">
+                <input type="radio" name="mySelect" value='16' class="select__input" id="mySelect1">
+                <label for="mySelect1" class="select__label">16</label>
+
+                <input type="radio" name="mySelect" value='32' class="select__input" id="mySelect2">
+                <label for="mySelect2" class="select__label">32</label>
+
+                <input type="radio" name="mySelect" value='64' class="select__input" id="mySelect3">
+                <label for="mySelect3" class="select__label">64</label>
+            </div>
+            <button id="clear">🔄</button>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

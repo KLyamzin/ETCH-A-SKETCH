@@ -1,0 +1,101 @@
+body {
+    margin: 30px;
+    background: rgb(233, 233, 233);
+}
+
+#header {
+    background: goldenrod;
+    height: 3em;
+    width: auto;
+}
+
+.tiles {
+    min-width: 360px;
+    min-height: 360px;
+    border: solid black 1px;
+    padding: 0;
+    margin: 40px 10px;
+    display: grid;
+    grid-template-columns: repeat(var(--size), 1fr);
+    grid-template-rows: repeat(var(--size), 1fr);
+
+}
+
+.aTile {
+    border: solid black 1px;
+}
+
+@media screen and (max-width: 400px) {
+    body {
+        padding: 10px;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .tiles {
+        --size: 4;
+        min-width: 360px;
+        min-height: 360px;
+        border: solid black 1px;
+        padding: 0;
+        margin: 20px 10px;
+        display: grid;
+        grid-template-columns: repeat(var(--size), 1fr);
+        grid-template-rows: repeat(var(--size), 1fr);
+    }
+
+    .aTile {
+        border: solid rgb(155, 150, 150) 1px;
+    }
+
+    .selector {
+        display: inline-flex;
+        /* align-items: center; */
+        overflow: hidden;
+        border-radius: 15px;
+        box-shadow: 0 0 5px rgb(0, 0, 0, 0.25);
+    }
+
+    .select__input {
+        display: none;
+    }
+
+    .select__label {
+        padding: 10px 16px;
+        font-size: 36px;
+        font-family: sans-serif;
+        color: #ffffff;
+        background: #009578;
+        cursor: pointer;
+        transition: background 0.1s;
+
+    }
+
+    .select__label:not(:last-of-type) {
+        border-right: 2px solid #006B56;
+    }
+
+    .select__input:checked+.select__label {
+        background: #006B56;
+    }
+
+    #clear {
+        background: #ffffff;
+        font-size: 35px;
+        padding: 10px 16px;
+        border-radius: 15px;
+        border: none;
+        box-shadow: 0 0 5px rgb(0, 0, 0, 0.25);
+    }
+
+    .controls {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 5px;
+
+    }
+}
