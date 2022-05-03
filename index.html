@@ -14,24 +14,21 @@
 
     <div class="tiles"></div>
 
-    <div class="operator">
+    <div class="controls">
         <p>Select the grid size</p>
+        <div class="selector">
+            <input type="radio" name="mySelect" value='16' class="select__input" id="mySelect1">
+            <label for="mySelect1" class="select__label">16</label>
 
-        <div class="controls">
-            <div class="selector">
-                <input type="radio" name="mySelect" value='16' class="select__input" id="mySelect1">
-                <label for="mySelect1" class="select__label">16</label>
+            <input type="radio" name="mySelect" value='32' class="select__input" id="mySelect2">
+            <label for="mySelect2" class="select__label">32</label>
 
-                <input type="radio" name="mySelect" value='32' class="select__input" id="mySelect2">
-                <label for="mySelect2" class="select__label">32</label>
-
-                <input type="radio" name="mySelect" value='64' class="select__input" id="mySelect3">
-                <label for="mySelect3" class="select__label">64</label>
-            </div>
-            <button id="clear">🔄</button>
+            <input type="radio" name="mySelect" value='64' class="select__input" id="mySelect3">
+            <label for="mySelect3" class="select__label">64</label>
         </div>
-
     </div>
+    <button id="clear"><img src="icons8-available-updates-64.png" alt="clear" height="45px"></button>
+
     <script src="script.js"></script>
 </body>
 
