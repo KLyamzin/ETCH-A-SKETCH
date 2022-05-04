@@ -1,6 +1,7 @@
 const tiles = document.querySelector('.tiles');
 let selector = document.querySelectorAll('input[name="mySelect"]');
 const clear = document.getElementById('clear');
+const color = document.querySelector('.color');
 let val;
 
 function createTiles(size) {
@@ -9,7 +10,7 @@ function createTiles(size) {
         const div = document.createElement('div');
         div.classList.add('aTile');
         div.addEventListener('mouseover', function () {
-            div.style.backgroundColor = '#f70030';
+            div.style.backgroundColor = color.value;
         })
         tiles.appendChild(div);
     }
