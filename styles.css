@@ -9,12 +9,12 @@ body {
     padding: 0;
     margin: 0;
     display: flex;
-    /* flex-wrap: wrap; */
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     background-color: #d8e7e0a3;
     height: 100vh;
+
 }
 
 .main {
@@ -22,13 +22,11 @@ body {
     margin: 0;
     display: flex;
     flex-direction: column;
-    /* flex-direction: column-reverse; */
-    /* flex-wrap: wrap-reverse; */
-    /* flex-wrap: wrap; */
+    margin-bottom: auto;
 }
 
-#header,
-#footer {
+.header,
+.footer {
     font-size: large;
     font-weight: 600;
     background: #00a988;
@@ -42,19 +40,8 @@ body {
     height: 3em;
     letter-spacing: 2px;
     font-family: "Trebuchet MS", sans-serif;
-
-    /*not mine*/
-    text-align: center;
+    /* text-align: center; */
 }
-
-/* #header {
-    align-self: flex-start;
-}
-
-#footer {
-    align-self: flex-end;
-    position: absolute;
-} */
 
 .tiles {
     --size: 4;
@@ -71,11 +58,6 @@ body {
     grid-template-rows: repeat(var(--size), 1fr);
     /* box-sizing: content-box; */
 }
-
-.aTile {
-    /* border: solid rgba(158, 158, 158, 0.406) 1px; */
-}
-
 
 .controls {
     display: flex;
@@ -121,32 +103,48 @@ body {
 }
 
 .color {
-    width: 10em;
+    width: 4.5em;
     height: 4.5em;
-    /* border-radius: 50%; */
-    border: none
+    border: solid #00a988 2px;
+    border-radius: 15px;
+    box-shadow: 0 0 5px rgb(0, 0, 0, 0.25);
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.color::-webkit-color-swatch {
+    border-radius: 15px;
+    border: none;
+    box-shadow: 0 0 5px rgb(0, 0, 0, 0.25);
 }
 
 #clear {
     background: #ffffff;
-    font-size: 35px;
     border-radius: 15px;
     border: none;
     box-shadow: 0 0 5px rgb(0, 0, 0, 0.25);
     display: flex;
     padding: 7px;
     cursor: pointer;
-    /* margin-left: 15px  */
-    /* margin-top: 10px; */
 }
 
 .colorColumn,
-.resetColumn {
+.resetColumn,
+.rainbow-mode {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+#rainbowBtn {
+    width: 4.5em;
+    height: 4.5em;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgb(0, 0, 0, 0.25);
+    background-image: conic-gradient(from 45deg, red, orange, yellow, green, blue, indigo, violet);
+}
 
 .color-and-reset {
     display: inline-flex;
@@ -175,8 +173,8 @@ p {
         min-height: 320px;
     }
 
-    #header,
-    #footer {
+    .header,
+    .footer {
         font-size: medium;
         font-weight: 500;
         height: 2em;

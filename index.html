@@ -11,36 +11,40 @@
 
 <body>
 
-    <div id="header">Etch A Sketch by The Odin Project</div>
+    <div class="header">Etch A Sketch by The Odin Project</div>
     <div class="main">
         <div class="tiles"></div>
-
+        <!-- all the control buttons -->
         <div class="controls">
             <p id="select-text">Select the grid size</p>
             <div class="selector">
                 <input type="radio" name="mySelect" value='16' class="select__input" id="mySelect1">
                 <label for="mySelect1" class="select__label">16</label>
-
                 <input type="radio" name="mySelect" value='32' class="select__input" id="mySelect2">
                 <label for="mySelect2" class="select__label">32</label>
-
                 <input type="radio" name="mySelect" value='64' class="select__input" id="mySelect3">
                 <label for="mySelect3" class="select__label">64</label>
             </div>
             <div class="color-and-reset">
-                <div class="colorColumn">
-
-                    <p>Choose color</p>
-                    <input type="color" class="color">
+                <!-- rainbow mode -->
+                <div class="rainbow-mode">
+                    <p>Rainbow</p>
+                    <button id="rainbowBtn" value="rainbow"></button>
                 </div>
-                <div class="resetColumn">
+                <div class="colorColumn">
+                    <!-- set color -->
+                    <p>Color</p>
+                    <input type="color" class="color" value="#00a988">
+                </div>
+                <!-- clear the grid -->
+                <div class=" resetColumn">
                     <p>Reset</p>
                     <button id="clear"><img src="icons8-available-updates-64.png" alt="clear" height="45px"></button>
                 </div>
             </div>
         </div>
     </div>
-    <div id="footer">@Kirill Lyamzin </div>
+    <div class="footer">@Kirill Lyamzin </div>
     <script src="script.js"></script>
 </body>
 
